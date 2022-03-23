@@ -26,10 +26,21 @@ Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
 ## Name of feature: *Server*
+
 Estimate of time needed to complete: 2 hours
 
 Start time: 7:30 am
 
 Finish time: 12 pm
 
-Actual time needed to complete: 5 hour
+Actual time needed to complete: 5 hours
+
+## Name of feature: *Front End*
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 12:30 pm
+
+Finish time: had to finish other work...incomplete
+
+Actual time needed to complete: 5 hours
