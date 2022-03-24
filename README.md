@@ -1,4 +1,4 @@
-# city-explorer-api
+# City-Explorer-Api
 
 **Author**: Roger Wells
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
@@ -44,3 +44,19 @@ Start time: 12:30 pm
 Finish time: had to finish other work...incomplete
 
 Actual time needed to complete: 5 hours
+
+![this is the WWRC](image/uml.png)
+
+**Version**: 1.0.2 (increment the patch/fix version number if you make more commits past your first submission)
+
+## Name of feature: *API Request Implementation*
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 7 am
+
+Finish time: 2 pm
+
+Actual time needed to complete: 5 hours
+
+![this is the WWRC](image/uml2.png)

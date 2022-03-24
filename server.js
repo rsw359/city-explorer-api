@@ -30,6 +30,19 @@ app.get('/weather', async (request, response) => {
 
 });
 
+app.get('/movies', async (request, response) => {
+
+  let city = searchQueryCity = request.query.city
+
+  let url = (`https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${city}&total_results=3`);
+    // console.log(url);
+    let moviedbData = await axios.get(url);
+  console.log(moviedbData);
+  let dataArray = moviedbData.data.map(cityMovieData => new Movie(cityMovieData));
+  response.send(movieArray);
+
+});
+
 app.get('*', (request, response) => {
   response.send('error');
 });
@@ -45,4 +58,13 @@ class Forecast {
     this.description = dailyCityData.weather.description;
 
   }
+}
+
+class Movie {
+  constructor(cityMovieData) {
+   
+    this.movie = cityMovieData.data
+    
+  }
+  
 }
