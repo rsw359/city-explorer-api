@@ -34,6 +34,7 @@ Start time: 7:30 am
 Finish time: 12 pm
 
 Actual time needed to complete: 5 hours
+![this is the WWRC](image/Lab6UML.png)
 
 ## Name of feature: *Front End*
 
@@ -60,4 +61,16 @@ Finish time: 2 pm
 Actual time needed to complete: 5 hours
 
 ![this is the WWRC](image/uml2.png)
+
+## Name of feature: *Modularization*
+
+Estimate of time needed to complete: 2 hour
+
+Start time: 6 am
+
+Finish time: 9 pm
+
+Actual time needed to complete: 3 hours
+![this is the WWRC](image/uml3.png)
+
 
