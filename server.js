@@ -3,38 +3,26 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const getMovies = require('./movies.js');
-const getWeather = require('./weather.js');
-//use
+const weakSausse = require('./modules/weather');
+
+
+// const weather = require('./modules/weather.js');
 const app = express();
+
+app.get('/weather', weatherHandler);
 app.use(cors());
 const PORT = process.env.PORT || 3002;
 
-// Routes
+function weatherHandler(request, response) {
+  let lat = request.query.lat;
+  let lon = request.query.lon;
 
-const movieHandler = async function(request, response) {
-  try{
+  weakSausse.getWeather(lat, lon)
+    .then(summaries => response.send(summaries))
+    .catch((error) => {
+      console.error(error);
+      response.status(200).send('Sorry. Something went wrong!');
+    });
+}
 
-    let city = request.query.city_name;
-    let result = await getMovies(city)
-    response.send(result)
-  }catch(error){
-    console.error(error);
-  }
-   
-};
-
-app.get('/movies', movieHandler);
-
-
-app.get('/weather', getWeather);
-
-app.get('*', (request, response) => {
-  response.send('error');
-});
-
-//Listen-start the server
-app.listen(PORT, () => console.log(`listening on port ${PORT}`));
-
-
-
+app.listen(PORT, () => console.log(`Server up on ${PORT}`));
